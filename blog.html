@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <section class="blog_box">
+      <header>LATEST</header>
+      <div class="con_box">
+        <a href="" class="box">
+          <div style="background-image: url(tumb.jpg);">
+            <section></section>
+          </div>
+          <p>
+            <i></i>
+            <span>Workers Needed</span>
+            <small>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ut eius minus necessitatibus aut iure voluptates iusto? Eaque hic aut iusto omnis nisi! Placeat quo, doloremque mollitia ipsum sit incidunt?</small>
+          </p>
+        </a>
+      </div>
+    </section>
+  </section>
+</body>
+
+</html>
+
+<style>
+  .page{
+    align-items: center;
+    padding: 3vh 0;
+  }
+  .blog_box{
+    width: 90%;
+    padding: 0 5%;
+  }
+  .blog_box header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5vh;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    font-family:  'Poppins',sans-serif;
+    border-bottom: 2px solid darkcyan;
+    letter-spacing: 1px;
+  }
+  .blog_box .con_box{
+    display: flex;
+    padding: 3vh 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem 0;
+    width: 100%;
+  }
+  .blog_box .con_box .box{
+    width: 350px;
+    padding: 5px;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-position: center;
+    background-size: cover;
+  }
+  .blog_box .con_box .box div{
+    height: 220px;
+    width: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blog_box .con_box .box div section{
+    width: 100px;
+    height: 30px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    border-right: 1px solid white;
+    border-right-width: 2px;
+  }
+  
+  .blog_box .con_box .box p{
+    width: 98%;
+    padding: 5px 1%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .blog_box .con_box .box p i{
+    top: -1rem;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    transition: 0.6s ease;
+    z-index: 10;
+    background: black;
+  }
+  .blog_box .con_box .box:hover p i{
+    scale: 100;
+  }
+  .blog_box .con_box .box:hover p span{
+    color: white;
+  }
+  .blog_box .con_box .box:hover p small{
+    color: white;
+  }
+
+
+  .blog_box .con_box .box p span{
+    color: black;
+    font-size: 1.1rem;
+    z-index: 20;
+  }
+  .blog_box .con_box .box p small{
+    z-index: 20;
+    min-height: inherit;
+    max-height: 170px;
+    overflow-y: auto;
+    color: rgb(87, 87, 87);
+    font-size: 0.95rem;
+  }
+  .blog_box .con_box .box p small::-webkit-scrollbar{
+    width: 8px;
+    background: lightgray;
+    border-radius: 40px;
+  }
+  .blog_box .con_box .box p small::-webkit-scrollbar-thumb{
+    background: darkgray;
+    border-radius: 40px;
+  }
+  @media all and (max-width:430px){
+    .blog_box .con_box .box{
+      width: 99%;
+    }
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+  integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const con_box = document.querySelector('.con_box')
+  const box = document.querySelector('.box')
+
+  for (var i = 0; i < 5; i++) {
+    var box_clone = box.cloneNode(true)
+    con_box.appendChild(box_clone)
+  }
+
+  const boxes = document.querySelectorAll('.box')
+  boxes.forEach((box,i)=>{
+    anime({
+      targets : box, 
+      translateY : [-30,0],
+      duration : 600,
+      delay : i * 40,
+      opacity : [0,1],
+      easing : 'easeInOutExpo'
+    })
+  })
+
+</script>
