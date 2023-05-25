@@ -8,6 +8,7 @@
   <link rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
   <title>Document</title>
 </head>
 
@@ -31,129 +32,7 @@
     </section>
   </section>
 </body>
-
 </html>
-
-<style>
-  .page{
-    align-items: center;
-    padding: 3vh 0;
-  }
-  .blog_box{
-    width: 90%;
-    padding: 0 5%;
-  }
-  .blog_box header{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 5vh;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2rem;
-    font-family:  'Poppins',sans-serif;
-    border-bottom: 2px solid darkcyan;
-    letter-spacing: 1px;
-  }
-  .blog_box .con_box{
-    display: flex;
-    padding: 3vh 0;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem 0;
-    width: 100%;
-  }
-  .blog_box .con_box .box{
-    width: 350px;
-    padding: 5px;
-    display: flex;
-    border-radius: 10px;
-    border: 1px solid darkgray;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    background-position: center;
-    background-size: cover;
-  }
-  .blog_box .con_box .box div{
-    height: 220px;
-    width: 100%;
-    border-radius: 10px;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .blog_box .con_box .box div section{
-    width: 100px;
-    height: 30px;
-    /* border: 2px solid rgb(255, 255, 255); */
-    border-right: 1px solid white;
-    border-right-width: 2px;
-  }
-  
-  .blog_box .con_box .box p{
-    width: 98%;
-    padding: 5px 1%;
-    background: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: flex-start;
-    position: relative;
-  }
-  .blog_box .con_box .box p i{
-    top: -1rem;
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    transition: 0.6s ease;
-    z-index: 10;
-    background: black;
-  }
-  .blog_box .con_box .box:hover p i{
-    scale: 100;
-  }
-  .blog_box .con_box .box:hover p span{
-    color: white;
-  }
-  .blog_box .con_box .box:hover p small{
-    color: white;
-  }
-
-
-  .blog_box .con_box .box p span{
-    color: black;
-    font-size: 1.1rem;
-    z-index: 20;
-  }
-  .blog_box .con_box .box p small{
-    z-index: 20;
-    min-height: inherit;
-    max-height: 170px;
-    overflow-y: auto;
-    color: rgb(87, 87, 87);
-    font-size: 0.95rem;
-  }
-  .blog_box .con_box .box p small::-webkit-scrollbar{
-    width: 8px;
-    background: lightgray;
-    border-radius: 40px;
-  }
-  .blog_box .con_box .box p small::-webkit-scrollbar-thumb{
-    background: darkgray;
-    border-radius: 40px;
-  }
-  @media all and (max-width:430px){
-    .blog_box .con_box .box{
-      width: 99%;
-    }
-  }
-</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
   integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
